@@ -42,66 +42,66 @@ const topTraders = [
 
 export const TopTraders = () => {
   return (
-    <Card className="bg-card brutalist-card border-border rounded-brutal">
-      <CardHeader className="pb-4">
-        <CardTitle className="flex items-center space-x-3">
-          <Trophy className="h-6 w-6 text-yellow-500" />
-          <span className="text-xl font-black">Top Traders</span>
+    <Card className="bg-gradient-card border-border/50">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center space-x-2">
+          <Trophy className="h-5 w-5 text-yellow-500" />
+          <span className="text-lg font-semibold">Top Traders</span>
         </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           {topTraders.map((trader) => (
-            <div key={trader.id} className="flex items-center justify-between p-5 rounded-brutal bg-gradient-to-r from-brutalist-green/20 to-brutalist-blue/20 border-thick border-border brutalist-shadow">
-              <div className="flex items-center space-x-4">
+            <div key={trader.id} className="flex items-center justify-between p-4 rounded-lg bg-background/30 border border-border/50">
+              <div className="flex items-center space-x-3">
                 <div className="relative">
-                  <Avatar className="h-14 w-14 brutalist-shadow border-thick border-border">
+                  <Avatar className="h-10 w-10">
                     <AvatarImage src={trader.avatar} />
-                    <AvatarFallback className="bg-brutalist-pink text-foreground font-black text-lg">
+                    <AvatarFallback className="bg-primary text-primary-foreground">
                       {trader.name.split(' ').map(n => n[0]).join('')}
                     </AvatarFallback>
                   </Avatar>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-500 rounded-brutal flex items-center justify-center border-thick border-foreground brutalist-shadow">
-                    <span className="text-xs font-black text-black">#{trader.rank}</span>
+                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold text-black">#{trader.rank}</span>
                   </div>
                 </div>
                 
                 <div>
-                  <div className="font-black text-base">{trader.name}</div>
-                  <div className="text-sm text-muted-foreground font-medium">{trader.username}</div>
-                  <div className="flex items-center space-x-3 mt-2">
-                    <Badge variant="outline" className="text-xs font-bold border-thick rounded-brutal">
+                  <div className="font-medium text-sm">{trader.name}</div>
+                  <div className="text-xs text-muted-foreground">{trader.username}</div>
+                  <div className="flex items-center space-x-2 mt-1">
+                    <Badge variant="outline" className="text-xs">
                       <Users className="h-3 w-3 mr-1" />
                       {trader.followers.toLocaleString()}
                     </Badge>
-                    <Badge variant="outline" className="text-xs font-bold border-thick rounded-brutal">
+                    <Badge variant="outline" className="text-xs">
                       {trader.winRate}% Win
                     </Badge>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
                 <div className="text-right">
-                  <div className="flex items-center space-x-2">
-                    <TrendingUp className="h-5 w-5 text-success" />
-                    <span className="font-black text-success text-lg">+{trader.roi}%</span>
+                  <div className="flex items-center space-x-1">
+                    <TrendingUp className="h-4 w-4 text-success" />
+                    <span className="font-bold text-success">+{trader.roi}%</span>
                   </div>
-                  <div className="text-sm text-muted-foreground font-medium">30d ROI</div>
+                  <div className="text-xs text-muted-foreground">30d ROI</div>
                 </div>
 
-                <div className="flex space-x-2">
+                <div className="flex space-x-1">
                   <Button
                     variant={trader.isFollowing ? "secondary" : "outline"}
                     size="sm"
-                    className="h-10 font-bold border-thick rounded-brutal brutalist-shadow hover:brutalist-shadow"
+                    className="h-8"
                   >
-                    <Star className={`h-4 w-4 mr-2 ${trader.isFollowing ? 'fill-current' : ''}`} />
+                    <Star className={`h-3 w-3 mr-1 ${trader.isFollowing ? 'fill-current' : ''}`} />
                     {trader.isFollowing ? "Following" : "Follow"}
                   </Button>
                   
-                  <Button variant="outline" size="sm" className="h-10 font-bold border-thick rounded-brutal brutalist-shadow hover:brutalist-shadow">
-                    <Copy className="h-4 w-4 mr-2" />
+                  <Button variant="outline" size="sm" className="h-8">
+                    <Copy className="h-3 w-3 mr-1" />
                     Copy
                   </Button>
                 </div>

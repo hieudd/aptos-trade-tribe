@@ -60,14 +60,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				bull: 'hsl(var(--success))',
-				bear: 'hsl(var(--destructive))',
-				neutral: 'hsl(var(--muted-foreground))',
-				'brutalist-pink': 'hsl(var(--brutalist-pink))',
-				'brutalist-blue': 'hsl(var(--brutalist-blue))',
-				'brutalist-green': 'hsl(var(--brutalist-green))',
-				'brutalist-orange': 'hsl(var(--brutalist-orange))',
-				'brutalist-purple': 'hsl(var(--brutalist-purple))',
+				bull: 'hsl(var(--bull))',
+				bear: 'hsl(var(--bear))',
+				neutral: 'hsl(var(--neutral))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -81,12 +76,8 @@ export default {
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 4px)',
-				sm: 'calc(var(--radius) - 8px)',
-				brutal: '1.25rem'
-			},
-			borderWidth: {
-				thick: 'var(--border-thick)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -143,13 +134,12 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-card': 'var(--gradient-card)',
 				'gradient-accent': 'var(--gradient-accent)'
 			},
 			boxShadow: {
-				'brutal': 'var(--shadow-brutal)',
-				'brutal-hover': 'var(--shadow-brutal-hover)',
-				'card-brutal': 'var(--shadow-card-brutal)'
+				'glow': 'var(--shadow-glow)',
+				'card': 'var(--shadow-card)'
 			}
 		}
 	},

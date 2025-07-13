@@ -8,59 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 30 100% 98%;
-    --foreground: 240 15% 15%;
+    --background: 220 27% 8%;
+    --foreground: 220 15% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 15% 15%;
+    --card: 220 25% 10%;
+    --card-foreground: 220 15% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 15% 15%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 15% 95%;
 
-    --primary: 270 95% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 214 95% 60%;
+    --primary-foreground: 220 27% 8%;
 
-    --secondary: 45 100% 75%;
-    --secondary-foreground: 240 15% 15%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 220 15% 85%;
 
-    --muted: 210 40% 95%;
-    --muted-foreground: 240 10% 45%;
+    --muted: 220 20% 12%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 15 100% 70%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 214 95% 60%;
+    --accent-foreground: 220 27% 8%;
 
-    --destructive: 0 85% 65%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 220 15% 95%;
 
-    --success: 120 60% 55%;
-    --success-foreground: 0 0% 100%;
+    --success: 142 75% 50%;
+    --success-foreground: 220 27% 8%;
 
-    --warning: 38 100% 65%;
-    --warning-foreground: 240 15% 15%;
+    --warning: 38 92% 60%;
+    --warning-foreground: 220 27% 8%;
 
-    --border: 240 15% 85%;
-    --input: 240 15% 90%;
-    --ring: 270 95% 65%;
+    --border: 220 20% 18%;
+    --input: 220 20% 15%;
+    --ring: 214 95% 60%;
 
-    --radius: 1.25rem;
+    --radius: 0.75rem;
 
-    /* Brutalist specific colors */
-    --brutalist-pink: 320 85% 75%;
-    --brutalist-blue: 200 85% 70%;
-    --brutalist-green: 150 70% 65%;
-    --brutalist-orange: 25 100% 70%;
-    --brutalist-purple: 270 95% 65%;
-
-    /* Soft Brutalism effects */
-    --shadow-brutal: 8px 8px 0px hsl(240 15% 15%);
-    --shadow-brutal-hover: 12px 12px 0px hsl(240 15% 15%);
-    --shadow-card-brutal: 6px 6px 0px hsl(240 15% 85%);
-    --border-thick: 3px;
+    /* Trading specific colors */
+    --bull: 142 75% 50%;
+    --bear: 0 75% 60%;
+    --neutral: 220 10% 60%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(270 95% 65%), hsl(320 85% 75%));
-    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 75%), hsl(25 100% 70%));
-    --gradient-accent: linear-gradient(135deg, hsl(15 100% 70%), hsl(0 85% 65%));
+    --gradient-primary: linear-gradient(135deg, hsl(214 95% 60%), hsl(214 100% 70%));
+    --gradient-card: linear-gradient(135deg, hsl(220 25% 10%), hsl(220 25% 12%));
+    --gradient-accent: linear-gradient(135deg, hsl(214 95% 60%), hsl(260 95% 65%));
+
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(214 95% 60% / 0.3);
+    --shadow-card: 0 4px 20px hsl(220 27% 8% / 0.4);
 
     --sidebar-background: 0 0% 98%;
 
@@ -79,40 +75,40 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 240 15% 15%;
-    --foreground: 30 100% 98%;
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 240 15% 20%;
-    --card-foreground: 30 100% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 240 15% 20%;
-    --popover-foreground: 30 100% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 270 95% 65%;
+    --primary: 214 95% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 100% 75%;
-    --secondary-foreground: 240 15% 15%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 240 15% 25%;
-    --muted-foreground: 240 10% 65%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 15 100% 70%;
+    --accent: 214 95% 60%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 85% 65%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --success: 120 60% 55%;
+    --success: 142 75% 45%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 38 100% 65%;
-    --warning-foreground: 240 15% 15%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
-    --border: 240 15% 30%;
-    --input: 240 15% 25%;
-    --ring: 270 95% 65%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 214 95% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -131,27 +127,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-weight: 500;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 800;
-    letter-spacing: -0.025em;
-  }
-
-  .brutalist-shadow {
-    box-shadow: var(--shadow-brutal);
-    transition: all 0.2s ease;
-  }
-
-  .brutalist-shadow:hover {
-    box-shadow: var(--shadow-brutal-hover);
-    transform: translate(-2px, -2px);
-  }
-
-  .brutalist-card {
-    box-shadow: var(--shadow-card-brutal);
-    border-width: var(--border-thick);
   }
 }

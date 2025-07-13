@@ -34,15 +34,13 @@ export const SidebarNav = ({ isCollapsed }: SidebarNavProps) => {
           key={item.href}
           variant={item.isActive ? "secondary" : "ghost"}
           className={cn(
-            "w-full justify-start h-14 transition-all duration-200 font-bold rounded-brutal border-thick",
-            item.isActive 
-              ? "bg-gradient-primary text-primary-foreground brutalist-shadow border-foreground" 
-              : "bg-card border-border hover:brutalist-shadow",
-            isCollapsed && "px-3"
+            "w-full justify-start h-12 transition-all duration-200",
+            item.isActive && "bg-primary/10 text-primary border border-primary/20",
+            isCollapsed && "px-2"
           )}
         >
-          <item.icon className={cn("h-6 w-6", isCollapsed ? "mx-0" : "mr-3")} />
-          {!isCollapsed && <span className="text-sm font-black">{item.label}</span>}
+          <item.icon className={cn("h-5 w-5", isCollapsed ? "mx-0" : "mr-3")} />
+          {!isCollapsed && <span className="text-sm font-medium">{item.label}</span>}
         </Button>
       ))}
     </nav>

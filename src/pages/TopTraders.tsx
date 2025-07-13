@@ -171,17 +171,16 @@ const TopTraders = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="p-6">
-        {/* Page Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-            Top Traders
-          </h1>
-          <p className="text-muted-foreground">
-            Discover and follow the most successful traders on Axora
-          </p>
-        </div>
+    <div className="space-y-6">
+      {/* Page Header */}
+      <div>
+        <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
+          Top Traders
+        </h1>
+        <p className="text-muted-foreground">
+          Discover and follow the most successful traders on Axora
+        </p>
+      </div>
 
         {/* Search and Filter Bar */}
         <Card className="bg-gradient-card border-border/50 mb-6">
@@ -263,7 +262,6 @@ const TopTraders = () => {
             </div>
           </TabsContent>
         </Tabs>
-      </main>
     </div>
   );
 };

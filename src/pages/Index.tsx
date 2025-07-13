@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/ui/navbar";
 import { SidebarNav } from "@/components/ui/sidebar-nav";
-import { PortfolioCard } from "@/components/dashboard/portfolio-card";
-import { MarketOverview } from "@/components/dashboard/market-overview";
-import { TopTraders } from "@/components/dashboard/top-traders";
 import { SocialFeed } from "@/components/dashboard/social-feed";
 import { CopyTrading } from "@/components/dashboard/copy-trading";
 import { UserProfile } from "@/components/dashboard/user-profiles";
@@ -58,15 +55,32 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Dashboard Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-            <div className="lg:col-span-2 space-y-6">
-              <PortfolioCard />
-              <MarketOverview />
-            </div>
-            <div>
-              <TopTraders />
-            </div>
+          {/* Quick Actions */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <Button size="lg" className="h-16 bg-gradient-primary hover:opacity-90" asChild>
+              <a href="/portfolio">
+                <div className="text-center">
+                  <h3 className="font-semibold">Portfolio</h3>
+                  <p className="text-sm opacity-90">View your trading dashboard</p>
+                </div>
+              </a>
+            </Button>
+            
+            <Button size="lg" variant="outline" className="h-16" asChild>
+              <a href="/traders">
+                <div className="text-center">
+                  <h3 className="font-semibold">Top Traders</h3>
+                  <p className="text-sm opacity-70">Follow successful traders</p>
+                </div>
+              </a>
+            </Button>
+            
+            <Button size="lg" variant="outline" className="h-16">
+              <div className="text-center">
+                <h3 className="font-semibold">Start Trading</h3>
+                <p className="text-sm opacity-70">Begin your journey</p>
+              </div>
+            </Button>
           </div>
 
           {/* Enhanced Social Trading Layout */}

@@ -59,68 +59,68 @@ const feedPosts = [
 
 export const SocialFeed = () => {
   return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-bold">Social Feed</h2>
+    <div className="space-y-6">
+      <h2 className="text-2xl font-black">Social Feed</h2>
       
       {feedPosts.map((post) => (
-        <Card key={post.id} className="bg-gradient-card border-border/50">
-          <CardContent className="p-4">
-            <div className="flex space-x-3">
-              <Avatar className="h-10 w-10">
+        <Card key={post.id} className="bg-card brutalist-card border-border rounded-brutal">
+          <CardContent className="p-6">
+            <div className="flex space-x-4">
+              <Avatar className="h-12 w-12 brutalist-shadow border-thick border-border">
                 <AvatarImage src={post.author.avatar} />
-                <AvatarFallback className="bg-primary text-primary-foreground">
+                <AvatarFallback className="bg-brutalist-orange text-foreground font-black">
                   {post.author.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
               
               <div className="flex-1">
-                <div className="flex items-center space-x-2 mb-2">
-                  <span className="font-semibold text-sm">{post.author.name}</span>
-                  <span className="text-xs text-muted-foreground">{post.author.username}</span>
-                  <span className="text-xs text-muted-foreground">•</span>
-                  <span className="text-xs text-muted-foreground">{post.timestamp}</span>
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="font-black text-base">{post.author.name}</span>
+                  <span className="text-sm text-muted-foreground font-medium">{post.author.username}</span>
+                  <span className="text-sm text-muted-foreground">•</span>
+                  <span className="text-sm text-muted-foreground font-medium">{post.timestamp}</span>
                 </div>
                 
-                <p className="text-sm mb-3 leading-relaxed">{post.content}</p>
+                <p className="text-sm mb-4 leading-relaxed font-medium">{post.content}</p>
                 
                 {post.trade && (
-                  <div className="mb-3 p-3 rounded-lg bg-background/50 border border-border/50">
+                  <div className="mb-4 p-4 rounded-brutal bg-gradient-to-r from-brutalist-purple/20 to-brutalist-pink/20 border-thick border-border">
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center space-x-3">
                         <Badge 
                           variant={post.trade.action === "BUY" ? "default" : "secondary"}
-                          className={post.trade.action === "BUY" ? "bg-success text-success-foreground" : "bg-destructive text-destructive-foreground"}
+                          className={`font-black border-thick rounded-brutal ${post.trade.action === "BUY" ? "bg-success text-success-foreground" : "bg-destructive text-destructive-foreground"}`}
                         >
                           {post.trade.action}
                         </Badge>
-                        <span className="font-medium">{post.trade.token}</span>
-                        <span className="text-sm text-muted-foreground">{post.trade.amount}</span>
+                        <span className="font-black text-base">{post.trade.token}</span>
+                        <span className="text-sm text-muted-foreground font-medium">{post.trade.amount}</span>
                       </div>
                       
                       {post.trade.profit && (
-                        <div className="flex items-center space-x-1">
-                          <TrendingUp className="h-4 w-4 text-success" />
-                          <span className="text-sm font-medium text-success">+{post.trade.profit}%</span>
+                        <div className="flex items-center space-x-2">
+                          <TrendingUp className="h-5 w-5 text-success" />
+                          <span className="text-base font-black text-success">+{post.trade.profit}%</span>
                         </div>
                       )}
                     </div>
                   </div>
                 )}
                 
-                <div className="flex items-center space-x-4 text-muted-foreground">
-                  <Button variant="ghost" size="sm" className="h-8 px-2">
-                    <Heart className="h-4 w-4 mr-1" />
-                    <span className="text-xs">{post.likes}</span>
+                <div className="flex items-center space-x-6 text-muted-foreground">
+                  <Button variant="ghost" size="sm" className="h-10 px-3 font-bold rounded-brutal border-thick border-transparent hover:border-border brutalist-shadow">
+                    <Heart className="h-4 w-4 mr-2" />
+                    <span className="text-sm">{post.likes}</span>
                   </Button>
                   
-                  <Button variant="ghost" size="sm" className="h-8 px-2">
-                    <MessageCircle className="h-4 w-4 mr-1" />
-                    <span className="text-xs">{post.comments}</span>
+                  <Button variant="ghost" size="sm" className="h-10 px-3 font-bold rounded-brutal border-thick border-transparent hover:border-border brutalist-shadow">
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    <span className="text-sm">{post.comments}</span>
                   </Button>
                   
-                  <Button variant="ghost" size="sm" className="h-8 px-2">
-                    <Share className="h-4 w-4 mr-1" />
-                    <span className="text-xs">{post.shares}</span>
+                  <Button variant="ghost" size="sm" className="h-10 px-3 font-bold rounded-brutal border-thick border-transparent hover:border-border brutalist-shadow">
+                    <Share className="h-4 w-4 mr-2" />
+                    <span className="text-sm">{post.shares}</span>
                   </Button>
                 </div>
               </div>

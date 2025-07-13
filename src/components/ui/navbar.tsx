@@ -18,7 +18,7 @@ export const Navbar = () => {
               <span className="text-primary-foreground font-bold text-sm">A</span>
             </div>
             <span className="font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
-              AptosTrader
+              Axora
             </span>
           </div>
         </div>

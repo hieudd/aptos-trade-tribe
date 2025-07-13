@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 220 25% 10%;
     --popover-foreground: 220 15% 95%;
 
-    --primary: 214 95% 60%;
+    --primary: 25 95% 53%;
     --primary-foreground: 220 27% 8%;
 
     --secondary: 220 20% 15%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 220 20% 12%;
     --muted-foreground: 220 10% 60%;
 
-    --accent: 214 95% 60%;
+    --accent: 25 95% 53%;
     --accent-foreground: 220 27% 8%;
 
     --destructive: 0 75% 60%;
@@ -40,7 +40,7 @@ All colors MUST be HSL.
 
     --border: 220 20% 18%;
     --input: 220 20% 15%;
-    --ring: 214 95% 60%;
+    --ring: 25 95% 53%;
 
     --radius: 0.75rem;
 
@@ -49,14 +49,21 @@ All colors MUST be HSL.
     --bear: 0 75% 60%;
     --neutral: 220 10% 60%;
 
+    /* Axora brand colors */
+    --brand-orange: 25 95% 53%;
+    --brand-orange-light: 25 95% 65%;
+    --brand-orange-dark: 25 95% 45%;
+
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 95% 60%), hsl(214 100% 70%));
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 65%));
     --gradient-card: linear-gradient(135deg, hsl(220 25% 10%), hsl(220 25% 12%));
-    --gradient-accent: linear-gradient(135deg, hsl(214 95% 60%), hsl(260 95% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(35 95% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 95% 53% / 0.9), hsl(220 27% 8% / 0.9));
 
     /* Shadows */
-    --shadow-glow: 0 0 30px hsl(214 95% 60% / 0.3);
+    --shadow-glow: 0 0 30px hsl(25 95% 53% / 0.3);
     --shadow-card: 0 4px 20px hsl(220 27% 8% / 0.4);
+    --shadow-glass: 0 8px 32px hsl(220 27% 8% / 0.3);
 
     --sidebar-background: 0 0% 98%;
 

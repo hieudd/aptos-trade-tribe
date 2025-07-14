@@ -85,7 +85,7 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar className="border-r border-border bg-background/95 backdrop-blur-sm">
+    <Sidebar className="border-r border-border bg-card backdrop-blur-sm">
       <SidebarHeader className="p-4 border-b border-border">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">

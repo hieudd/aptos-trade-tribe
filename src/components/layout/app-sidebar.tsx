@@ -85,8 +85,8 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar className="border-r border-border bg-card/50 backdrop-blur-sm">
-      <SidebarHeader className="p-4">
+    <Sidebar className="border-r border-border bg-background/95 backdrop-blur-sm">
+      <SidebarHeader className="p-4 border-b border-border">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">A</span>
@@ -99,19 +99,21 @@ export function AppSidebar() {
         </div>
       </SidebarHeader>
 
-      <SidebarContent className="px-2">
+      <SidebarContent className="px-2 py-4">
         <SidebarGroup>
-          <SidebarGroupLabel>Trading</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-2">
+            Trading
+          </SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="space-y-1">
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild
                     isActive={isActive(item.url)}
                     className={cn(
-                      "w-full justify-start transition-all duration-200",
-                      isActive(item.url) && "bg-primary/10 text-primary border border-primary/20"
+                      "w-full justify-start transition-all duration-200 text-foreground hover:bg-primary/5 hover:text-primary",
+                      isActive(item.url) && "bg-primary/10 text-primary border border-primary/20 shadow-sm"
                     )}
                   >
                     <Link to={item.url}>
@@ -125,18 +127,20 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarGroup>
-          <SidebarGroupLabel>System</SidebarGroupLabel>
+        <SidebarGroup className="mt-6">
+          <SidebarGroupLabel className="text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-2">
+            System
+          </SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="space-y-1">
               {secondaryItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild
                     isActive={isActive(item.url)}
                     className={cn(
-                      "w-full justify-start transition-all duration-200",
-                      isActive(item.url) && "bg-primary/10 text-primary border border-primary/20"
+                      "w-full justify-start transition-all duration-200 text-foreground hover:bg-primary/5 hover:text-primary",
+                      isActive(item.url) && "bg-primary/10 text-primary border border-primary/20 shadow-sm"
                     )}
                   >
                     <Link to={item.url}>
@@ -151,8 +155,12 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-4">
-        <Button variant="ghost" size="sm" className="w-full justify-start">
+      <SidebarFooter className="p-4 border-t border-border">
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          className="w-full justify-start text-foreground hover:bg-primary/5 hover:text-primary transition-all duration-200"
+        >
           <Bell className="h-4 w-4 mr-2" />
           {!collapsed && <span>Notifications</span>}
         </Button>
